@@ -15,9 +15,52 @@ In the classroom workspace, the data from the Waymo dataset has been organized i
 The files in the test directory are:
 
 segment-12012663867578114640_820_000_840_000_with_camera_labels.tfrecord
+
 segment-1208303279778032257_1360_000_1380_000_with_camera_labels.tfrecord
+
 segment-12200383401366682847_2552_140_2572_140_with_camera_labels.tfrecord
 
 The files in the train and val directories are similar.
 
-The first step of the project was to do exploratory data analysis using the data available in the data directories mentioned above. The Explore Data Analysis.ipynb Jupyter notebook file. The first step was to implement the display_images function. 
+The first step of the project was to do exploratory data analysis using the data available in the data directories mentioned above. The Explore Data Analysis.ipynb Jupyter notebook file. The first step was to implement the display_images function and display 10 images from the training dataset. Here are some example images from the running the display images function.
+
+![image](https://user-images.githubusercontent.com/7365421/190018480-6bd0eb9d-d406-4638-a89b-992d0f2c7018.png)
+![image](https://user-images.githubusercontent.com/7365421/190018527-b9620917-5d74-4b61-aaea-c089924d0962.png)
+![image](https://user-images.githubusercontent.com/7365421/190018561-8f0b9e73-59ff-45ff-9809-0b057aab4093.png)
+![image](https://user-images.githubusercontent.com/7365421/190018594-c6f7c53c-df0e-421c-9fe9-c502684dcd67.png)
+![image](https://user-images.githubusercontent.com/7365421/190018622-b36d0007-c67d-41c6-9096-1372dc79c6c5.png)
+![image](https://user-images.githubusercontent.com/7365421/190018665-53bcb712-8529-4d1d-a364-ed0efea54600.png)
+![image](https://user-images.githubusercontent.com/7365421/190018714-aa741d43-7216-46e2-850d-700b21b827b1.png)
+![image](https://user-images.githubusercontent.com/7365421/190018729-af91bb46-7298-4e3f-ba0e-20d37474a3ea.png)
+![image](https://user-images.githubusercontent.com/7365421/190018764-d1fb5e77-c6f9-4287-a645-886f38f3b5a0.png)
+![image](https://user-images.githubusercontent.com/7365421/190018804-cf743ea8-17fe-4357-9063-1f29b0fa5831.png)
+
+From the instructions in the Jupyter notebook, the object classes are required to have color coded bounding boxes with vehicles in red, pedestrians in blue and cyclists in green. As you can see from the images above, there are very few pedestrians or cyclists, but many cars. In fact, I had to run the script many times to search for images with a cyclist. A couple of images with cyclists and pedestrians are shown below. 
+
+![image](https://user-images.githubusercontent.com/7365421/190019659-0b1c525e-6556-496f-88c2-3ca81f52f570.png)
+![image](https://user-images.githubusercontent.com/7365421/190019850-d580d65c-75ff-49c9-b7aa-c1b066e919c0.png)
+![image](https://user-images.githubusercontent.com/7365421/190019914-39ec6f24-e8d5-4c4e-bca5-55ef9058fa02.png)
+
+The observation that there were so few pedestrians and cyclists in the dataset images led me to write some code to count the relative frequency of vehicles, pedestrians and cyclists in a random set of images in the training dataset. The output from this code led to results such as:
+
+![image](https://user-images.githubusercontent.com/7365421/190020940-b26765b6-7bfd-4837-ad88-46d0e2c9551f.png)
+![image](https://user-images.githubusercontent.com/7365421/190021091-d62f3e6d-d3f4-4aec-89dd-75e857773e48.png)
+![image](https://user-images.githubusercontent.com/7365421/190021206-372ba1a4-9766-4416-a9de-490607c340cf.png)
+![image](https://user-images.githubusercontent.com/7365421/190022702-a8462535-f94e-4e33-bd90-dbd007900639.png)
+![image](https://user-images.githubusercontent.com/7365421/190022757-7a3a1994-dca5-4ee9-a2c5-fceba7658b43.png)
+
+
+
+As can be seen from these statistics, there are indeed very few cyclists in the dataset images. There are far more vehicles than pedestrians and far more pedestrians than cyclists. From the data above, there are about 3.5 more vehicles than cyclists and about 38.9 times more pedestrians than cyclists. There are very few cyclists indeed and this could be a weakness in the dataset.
+
+As part of the additional exploratory data analysis, I displayed 5 images from the val folder to compare validation images with training images. Here are two images containing a cyclist from the validation data. However, the blue bounding boxes seem to be incorrect (false positive) annotations of pedestrians.
+
+![image](https://user-images.githubusercontent.com/7365421/190022857-5bb81933-cb13-4343-b506-a017dbf9e502.png)
+![image](https://user-images.githubusercontent.com/7365421/190022109-4bf94bf3-e489-4610-b9f4-6341763e7206.png)
+
+
+
+
+
+
+
