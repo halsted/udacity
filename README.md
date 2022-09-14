@@ -87,7 +87,7 @@ However, the mAP seems to be quite low so it seems that something may still be g
 I created the animation file and it does detect vehicles. An earlier animation that I did lacked bounding boxes, but the latest model produced an animation that detected many vehicles. However, my animation.gif file is 186 MB and I cannot upload it to this github repo. When I try to upload it, I get the message that the file needs to be 25 MB or less. I used FreeConvert.com to get my animation file to less than 25 MB and uploaded it as animation_compress.gif.
 
 ## Summary
-This project took a lot of trial-and-error! Finding appropriate data augmentations and running training processes is very time consuming and uses much GPU time. In addition, my training processes crashed multiple times which was very frustrating. In the end, I was able to get a training with total loss under 2.0 and it produced an animation that detected many vehicles in an urban setting at night.
+This project took a lot of trial-and-error! Finding appropriate data augmentations and running training processes is very time consuming and uses much GPU time. In addition, my training processes crashed multiple times which was very frustrating. In the end, I was able to get a training with total loss under 2.0 and it produced an animation that detected many vehicles in an urban setting at night. I think it was a valuable learning experience and am looking forward to moving on in the course!
 
 
 
