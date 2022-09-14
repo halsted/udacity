@@ -58,7 +58,39 @@ As part of the additional exploratory data analysis, I displayed 5 images from t
 ![image](https://user-images.githubusercontent.com/7365421/190022857-5bb81933-cb13-4343-b506-a017dbf9e502.png)
 ![image](https://user-images.githubusercontent.com/7365421/190022109-4bf94bf3-e489-4610-b9f4-6341763e7206.png)
 
+## Training
 
+***Reference experiment***
+
+For my reference experiment, I ran the default pipeline.config, which is the config for a SSD (Single Shot MultiBox Detector) Resnet 50 640x640 model in Tensorflow. This config file uses the Tensorflow Object Detection API. I followed the instructions given in the Project Instructions page exactly. The results I got were quite confusing so I posted my results and questions to the Udacity forum (https://knowledge.udacity.com/questions/897885). Here is the result of my training from Tensorboard:
+
+![image](https://user-images.githubusercontent.com/7365421/190024551-6d8e42f3-23a7-4e2d-971f-4a98eb2f8d6a.png)
+
+As you can see from the figures, the total loss at the end of the training was around 23. The mentor (Chaeseong L) told me that the loss was too high so the training was not successful. I tried it more than once with the default files, but got similar results. The mentor mentioned that in order to be successful, the total loss should be under 2.0. 
+
+***Improve on the reference***
+
+I made many iterations in order to improve the training to reach a total loss of under 2.0. I tried to run two different  models (faster_rcnn_resnet101_v1_640x640_coco17_tpu-8 and ssd_resnet101_v1_fpn_640x640_coco17_tpu-8), but neither of these would run successfully in the classroom workspace environment. It seems some of the needed libraries were missing. 
+
+I also tried adding data augmentations based on suggestions from mentor Chaeseong L. In the end, I updated the config file to have a batch_size of 8 and added several data augmentations: random_adjust_contrast (min_delta: 0.6, max_delta: 1.0), random_rgb_to_gray (probability: 0.2), and random_adjust_brightness (max_delta: 0.2). I experimented with the Explore augmentations.ipynb notebook and thought that these data augmentations would provide good diversity to the dataset images. I was able to get the training total loss to less than 2.0 as shown in the Tensorboard figures below.
+
+![image](https://user-images.githubusercontent.com/7365421/190026720-f5a69890-368e-44dd-a71b-3a3e6e1fe497.png)
+
+The images from the evaluation from Tensorboard seem to show that the CNN was detecting vehicles fairly well.
+
+![image](https://user-images.githubusercontent.com/7365421/190026939-0e9c02e4-1994-4bfa-ac5e-e58bd76cbdf0.png)
+
+However, the mAP seems to be quite low so it seems that something may still be going wrong.
+
+![image](https://user-images.githubusercontent.com/7365421/190027139-f2b29f25-1013-421a-9f44-094ff7313425.png)
+![image](https://user-images.githubusercontent.com/7365421/190027298-cb5b8734-4834-4ed3-bb58-8311148592c4.png)
+
+I created the animation file and it does detect vehicles. An earlier animation that I did lacked bounding boxes, but for the latest model produced an animation that detected many vehicles.
+
+
+
+
+  
 
 
 
