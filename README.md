@@ -40,16 +40,15 @@ From the instructions in the Jupyter notebook, the object classes are required t
 ![image](https://user-images.githubusercontent.com/7365421/190019659-0b1c525e-6556-496f-88c2-3ca81f52f570.png)
 ![image](https://user-images.githubusercontent.com/7365421/190019850-d580d65c-75ff-49c9-b7aa-c1b066e919c0.png)
 ![image](https://user-images.githubusercontent.com/7365421/190019914-39ec6f24-e8d5-4c4e-bca5-55ef9058fa02.png)
+![image](https://user-images.githubusercontent.com/7365421/190022702-a8462535-f94e-4e33-bd90-dbd007900639.png)
+![image](https://user-images.githubusercontent.com/7365421/190022757-7a3a1994-dca5-4ee9-a2c5-fceba7658b43.png)
+
 
 The observation that there were so few pedestrians and cyclists in the dataset images led me to write some code to count the relative frequency of vehicles, pedestrians and cyclists in a random set of images in the training dataset. The output from this code led to results such as:
 
 ![image](https://user-images.githubusercontent.com/7365421/190020940-b26765b6-7bfd-4837-ad88-46d0e2c9551f.png)
 ![image](https://user-images.githubusercontent.com/7365421/190021091-d62f3e6d-d3f4-4aec-89dd-75e857773e48.png)
 ![image](https://user-images.githubusercontent.com/7365421/190021206-372ba1a4-9766-4416-a9de-490607c340cf.png)
-![image](https://user-images.githubusercontent.com/7365421/190022702-a8462535-f94e-4e33-bd90-dbd007900639.png)
-![image](https://user-images.githubusercontent.com/7365421/190022757-7a3a1994-dca5-4ee9-a2c5-fceba7658b43.png)
-
-
 
 As can be seen from these statistics, there are indeed very few cyclists in the dataset images. There are far more vehicles than pedestrians and far more pedestrians than cyclists. From the data above, there are about 3.5 more vehicles than cyclists and about 38.9 times more pedestrians than cyclists. There are very few cyclists indeed and this could be a weakness in the dataset.
 
