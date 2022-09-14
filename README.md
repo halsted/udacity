@@ -84,7 +84,7 @@ However, the mAP seems to be quite low so it seems that something may still be g
 ![image](https://user-images.githubusercontent.com/7365421/190027139-f2b29f25-1013-421a-9f44-094ff7313425.png)
 ![image](https://user-images.githubusercontent.com/7365421/190027298-cb5b8734-4834-4ed3-bb58-8311148592c4.png)
 
-I created the animation file and it does detect vehicles. An earlier animation that I did lacked bounding boxes, but for the latest model produced an animation that detected many vehicles. However, my animation.gif file is 186 MB and I cannot upload it to this github repo. When I try to upload it, I get the message that the file needs to be 25 MB or less. The animation.gif file is in my Udacity workspace so perhaps a Mentor can download it and view it from there.
+I created the animation file and it does detect vehicles. An earlier animation that I did lacked bounding boxes, but for the latest model produced an animation that detected many vehicles. However, my animation.gif file is 186 MB and I cannot upload it to this github repo. When I try to upload it, I get the message that the file needs to be 25 MB or less. Even after compressing the file, it is too large. The animation.gif file is in my Udacity workspace so perhaps a Mentor can download it and view it from there.
 
 
 
