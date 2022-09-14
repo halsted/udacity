@@ -50,7 +50,7 @@ The observation that there were so few pedestrians and cyclists in the dataset i
 ![image](https://user-images.githubusercontent.com/7365421/190021091-d62f3e6d-d3f4-4aec-89dd-75e857773e48.png)
 ![image](https://user-images.githubusercontent.com/7365421/190021206-372ba1a4-9766-4416-a9de-490607c340cf.png)
 
-As can be seen from these statistics, there are indeed very few cyclists in the dataset images. There are far more vehicles than pedestrians and far more pedestrians than cyclists. From the data above, there are about 3.5 more vehicles than cyclists and about 38.9 times more pedestrians than cyclists. There are very few cyclists indeed and this could be a weakness in the dataset.
+As can be seen from these statistics, there are very few cyclists in the dataset images. There are far more vehicles than pedestrians and far more pedestrians than cyclists. From the data above, there are about 3.5 more vehicles than cyclists and about 38.9 times more pedestrians than cyclists. There are very few cyclists indeed and this could be a weakness in the dataset.
 
 As part of the additional exploratory data analysis, I displayed 5 images from the val folder to compare validation images with training images. Here are two images containing a cyclist from the validation data. However, the blue bounding boxes seem to be incorrect (false positive) annotations of pedestrians.
 
